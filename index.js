@@ -80,3 +80,24 @@ function truncateString(str, num) {
     return str;
   }
 }
+
+
+
+document.getElementById("clipboard").addEventListener("click",
+
+
+  function() {
+    var copyText = ResultBar;
+    var textArea = document.createElement("textarea");
+    textArea.value = copyText.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("Copy");
+    textArea.remove();
+    if(textArea.value)
+    {
+      alert("copied");
+    }
+
+    
+})
